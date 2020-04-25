@@ -1,1 +1,10 @@
+add this to ~/.bashrc
+
+#Aliases
+#alias for updating the whole system
+alias update_all="sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y && sudo apt autoclean && sudo apt clean && flatpak update && snap refresh"
+#alias for the tar command
+alias untar="tar -xvfz"
+# Print my public IP
+alias myip='curl ipinfo.io/ip'
 
