@@ -23,14 +23,14 @@ echo 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
 #setup my usual flatpak apps
 echo 'Installing Flatpak apps...'
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    flatpak install flathub com.viber.Viber
-    flatpak install flathub com.skype.Client
-    flatpak install flathub org.libreoffice.LibreOffice
-    flatpak install flathub org.telegram.desktop
-    flatpak install flathub org.mozilla.Thunderbird
-    flatpak install flathub com.gitlab.librebob.Athenaeum
-    flatpak install flathub com.valvesoftware.Steam
-    flatpak install flathub com.github.tchx84.Flatseal
+    flatpak --noninteractive --assumeyes install flathub com.viber.Viber
+    flatpak --noninteractive --assumeyes install flathub com.skype.Client
+    flatpak --noninteractive --assumeyes install flathub org.libreoffice.LibreOffice
+    flatpak --noninteractive --assumeyes install flathub org.telegram.desktop
+    flatpak --noninteractive --assumeyes install flathub org.mozilla.Thunderbird
+    flatpak --noninteractive --assumeyes install flathub com.gitlab.librebob.Athenaeum
+    flatpak --noninteractive --assumeyes install flathub com.valvesoftware.Steam
+    flatpak --noninteractive --assumeyes install flathub com.github.tchx84.Flatseal
 
 #install the snaps for work
 echo 'Installing tandem and hub for Github...'
