@@ -41,3 +41,13 @@ snap connect tandem:pulseaudio :pulseaudio
 
 #Remember to install InSync for Google Drive InSync
 echo 'Download the latest Gogole Drive sync client at https://www.insynchq.com/downloads'
+
+#Install the awesome ICE from Peppermint
+echo 'If you are not on Peppermint, go to Peppermint OS PPAs and download the latest ICE'
+firefox https://launchpad.net/~peppermintos
+
+#setup the Github and GitLab sync with this folder
+echo "To setup sync of this backup folder to Github and GitLab at the same time, follow instructions from https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/"
+echo "Get ready with your Github and GitLab tokens"
+#git remote set-url origin --add https://gitlab.com/vokativ/debian_linux_settings_and_scripts.git
+
