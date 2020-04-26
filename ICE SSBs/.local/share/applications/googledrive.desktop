@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Drive
+Comment=Google Drive (Ice SSB)
+Exec=ice-firefox http://drive.google.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/googledrive.svg
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=drive.google.com_

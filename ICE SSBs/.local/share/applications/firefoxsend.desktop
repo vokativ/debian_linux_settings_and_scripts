@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Firefox Send
+Comment=Firefox Send (Ice SSB)
+Exec=ice-firefox  https://send.firefox.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/firefoxsend.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-firefoxsend
+StartupNotify=true
+IceFirefox=firefoxsend

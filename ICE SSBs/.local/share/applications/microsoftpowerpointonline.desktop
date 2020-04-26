@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft PowerPoint (Online)
+Comment=Free online version of Microsoft Office Powerpoint
+Exec=ice-firefox https://office.live.com/start/PowerPoint.aspx
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/ms-office-online-powerpoint.svg
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=office.live.com_start_PowerPoint.aspx

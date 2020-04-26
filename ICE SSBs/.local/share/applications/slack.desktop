@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Slack
+Comment=Slack (Ice SSB)
+Exec=vivaldi --app=https://app.slack.com/client/TFTBB3CGG --class=ICE-SSB-slack
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/slack.ico
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-slack
+StartupNotify=true

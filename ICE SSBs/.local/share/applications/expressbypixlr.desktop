@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Express by Pixlr
+Comment=Express by Pixlr (Ice SSB)
+Exec=ice-firefox http://pixlr.com/express/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/expressbypixlr.ico
+Categories=GTK;Graphics;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=pixlr.com_express_

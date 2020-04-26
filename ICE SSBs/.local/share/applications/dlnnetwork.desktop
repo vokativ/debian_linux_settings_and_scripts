@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=DLNnetwork
+Comment=DLNnetwork (Ice SSB)
+Exec=ice-firefox https://destinationlinux.network/
+IceFirefox=dlnnetwork
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/dlnnetwork.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-dlnnetwork
+StartupNotify=true

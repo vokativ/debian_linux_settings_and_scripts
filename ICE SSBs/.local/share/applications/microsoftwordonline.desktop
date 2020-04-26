@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft Word (Online)
+Comment=Free online version of Microsoft Office Word
+Exec=ice-firefox https://office.live.com/start/Word.aspx
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/ms-office-online-word.svg
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=office.live.com_start_Word.aspx

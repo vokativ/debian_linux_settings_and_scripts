@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Entanglement
+Comment=Entanglement (Ice SSB)
+Exec=ice-firefox http://entanglement.gopherwoodstudios.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/entanglement.ico
+Categories=GTK;Game;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=entanglement.gopherwoodstudios.com_

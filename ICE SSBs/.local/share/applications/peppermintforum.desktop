@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Peppermint Forum
+Comment=Peppermint Forum (Ice SSB)
+Exec=ice-firefox https://forum.peppermintos.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/peppermintforum.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=forum.peppermintos.com_

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=SMS
+Comment=SMS (Ice SSB)
+Exec=firefox --class ICE-SSB-sms --profile /home/nemanja/.local/share/ice/firefox/sms --no-remote https://messages.google.com/web
+IceFirefox=sms
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/sms.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-sms
+StartupNotify=true

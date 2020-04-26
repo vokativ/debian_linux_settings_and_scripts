@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Editor by Pixlr
+Comment=Editor by Pixlr (Ice SSB)
+Exec=ice-firefox http://pixlr.com/editor/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/editorbypixlr.ico
+Categories=GTK;Graphics;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=pixlr.com_editor_

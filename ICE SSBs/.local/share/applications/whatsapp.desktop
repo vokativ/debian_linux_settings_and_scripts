@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=WhatsApp
+Comment=WhatsApp (Ice SSB)
+Exec=firefox --class ICE-SSB-whatsapp --profile /home/nemanja/.local/share/ice/firefox/whatsapp --no-remote https://web.whatsapp.com/
+IceFirefox=whatsapp
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/whatsapp.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-whatsapp
+StartupNotify=true

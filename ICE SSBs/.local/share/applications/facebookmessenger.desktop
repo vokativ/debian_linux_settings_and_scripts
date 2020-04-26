@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Facebook Messenger
+Comment=Facebook Messenger (Ice SSB)
+Exec=firefox --class ICE-SSB-facebookmessenger --profile /home/nemanja/.local/share/ice/firefox/facebookmessenger --no-remote https://www.messenger.com/t/Evichka
+IceFirefox=facebookmessenger
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/facebookmessenger.ico
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-facebookmessenger
+StartupNotify=true

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=First-Person Tetris
+Comment=First-Person Tetris (Ice SSB)
+Exec=ice-firefox http://firstpersontetris.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/firstpersontetris.png
+Categories=GTK;Game;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=firstpersontetris.com_

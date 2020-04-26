@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Solitaire
+Comment=Solitaire (Ice SSB)
+Exec=ice-firefox https://worldofsolitaire.com/
+IceFirefox=solitaire
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/solitaire.png
+Categories=GTK;Game;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-solitaire
+StartupNotify=true

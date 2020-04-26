@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Pinball
+Comment=Pinball (Ice SSB)
+Exec=ice-firefox https://playpager.com/play-pinball/index.html
+IceFirefox=pinball
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/pinball.png
+Categories=GTK;Game;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-pinball
+StartupNotify=true

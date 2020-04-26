@@ -1,0 +1,14 @@
+Copy these folders to the home directory
+
+The location of ICE SSBs (from https://forum.peppermintos.com/index.php?topic=7910.0)
+
+Icons =
+~/.local/share/ice
+
+SSB launchers =
+~/.local/share/application
+
+Firefox SSB configs =
+~/.local/share/ice/firefox
+
+Be aware any SSB launchers with Firefox as the backend will REQUIRE the ice package to be installed on the new system.

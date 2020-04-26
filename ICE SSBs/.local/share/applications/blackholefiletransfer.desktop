@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=BlackHole File Transfer
+Comment=BlackHole File Transfer (Ice SSB)
+Exec=firefox --class ICE-SSB-blackholefiletransfer --profile /home/nemanja/.local/share/ice/firefox/blackholefiletransfer --no-remote https://blackhole.run/web
+IceFirefox=blackholefiletransfer
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/blackholefiletransfer.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-blackholefiletransfer
+StartupNotify=true

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Mahjong
+Comment=Mahjong (Ice SSB)
+Exec=ice-firefox http://www.solitr.com/mahjong
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/mahjong.png
+Categories=GTK;Game;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=www.solitr.com_mahjong

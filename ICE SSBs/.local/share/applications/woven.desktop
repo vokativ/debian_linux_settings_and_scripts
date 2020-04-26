@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Woven
+Comment=Woven (Ice SSB)
+Exec=vivaldi --app=https://woven.com/app --class=ICE-SSB-woven
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/woven.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-woven
+StartupNotify=true

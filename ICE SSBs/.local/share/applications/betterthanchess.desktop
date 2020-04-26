@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Better Than Chess
+Comment=Better Than Chess (Ice SSB)
+Exec=ice-firefox http://www.betterthanchess.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/ddchess.png
+Categories=GTK;Game;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=www.betterthanchess.com_

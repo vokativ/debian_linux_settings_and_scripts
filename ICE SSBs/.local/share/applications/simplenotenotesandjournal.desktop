@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Simplenote - notes and Journal
+Comment=Simplenote - notes and Journal (Ice SSB)
+Exec=firefox --class ICE-SSB-simplenotenotesandjournal --profile /home/nemanja/.local/share/ice/firefox/simplenotenotesandjournal --no-remote https://app.simplenote.com/
+IceFirefox=simplenotenotesandjournal
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/simplenotenotesandjournal.ico
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-simplenotenotesandjournal
+StartupNotify=true

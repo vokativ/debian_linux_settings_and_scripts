@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft OneNote (Online)
+Comment=Free online version of Microsoft Office OneNote
+Exec=ice-firefox https://www.onenote.com/notebooks
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/ms-office-online-onenote.svg
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=www.onenote.com_notebooks

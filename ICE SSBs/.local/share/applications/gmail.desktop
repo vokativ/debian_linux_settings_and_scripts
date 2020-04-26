@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Gmail
+Comment=Gmail (Ice SSB)
+Exec=ice-firefox http://mail.google.com/
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/usr/share/ice/gmail.svg
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=Chromium
+StartupNotify=true
+IceFirefox=mail.google.com_
