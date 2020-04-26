@@ -11,8 +11,20 @@ echo 'Adding repositories...'
 
 #now install my usual packages
     echo 'installing basic software and flathub. This will take a while'
-    sudo DEBIAN_FRONTEND=noninteractive apt install --yes firefox htop chromium-browser chromium-codecs-ffmpeg-extra vlc cheese neofetch curl python ruby flatpak gnome-software-plugin-flatpak git
+    sudo DEBIAN_FRONTEND=noninteractive apt install --yes firefox htop chromium-browser chromium-codecs-ffmpeg-extra vlc cheese neofetch curl python ruby flatpak git
 
+    read - 'Using 1) Gnome or 2) KDE? Need to know for Flatpak integration. 1 or 2: ' kde_or_gnome
+    
+    if [kde_or_gnome -eq 1]
+    then
+        sudo DEBIAN_FRONTEND=noninteractive apt install --yes plasma-discover-flatpak-backend
+    elif [kde_or_gnome -eq 2]
+        sudo DEBIAN_FRONTEND=noninteractive apt install --yes gnome-software-plugin-flatpak
+    else
+        echo 'Don't be a smart ass
+    fi
+    
+    
 #installing vivaldi
 echo 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
 
