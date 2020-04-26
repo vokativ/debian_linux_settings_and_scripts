@@ -1,0 +1,1 @@
+filebot -script fn:amc --output "\\M_N_storage\video" --action move -non-strict "\\M_N_storage\home\download\TVShows_Downlaod" --log-file amc.log --def excludeList=amc.txt --def emby=192.168.86.40:cdf276f3f5b9379629417d56b6e3f0fc
