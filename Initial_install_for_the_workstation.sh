@@ -31,7 +31,12 @@ echo 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
     wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
     sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
     sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install --yes vivaldi-stable
-
+    
+#install Signal
+    curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+    echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+    sudo apt update && sudo apt install signal-desktop
+    
 #setup my usual flatpak apps
 echo 'Installing Flatpak apps...'
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
