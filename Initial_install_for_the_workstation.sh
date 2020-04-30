@@ -37,6 +37,10 @@ echo 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
     echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
     sudo apt update && sudo apt install signal-desktop
     
+#install Calibre
+    sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+    
+    
 #setup my usual flatpak apps
 echo 'Installing Flatpak apps...'
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
