@@ -21,7 +21,7 @@ echo 'Adding repositories...'
     elif [kde_or_gnome -eq 2]
         sudo DEBIAN_FRONTEND=noninteractive apt install --yes gnome-software-plugin-flatpak
     else
-        echo 'Don't be a smart ass
+        echo "Don't be a smart ass"
     fi
     
     
