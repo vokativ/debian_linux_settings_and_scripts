@@ -15,7 +15,7 @@
     sudo apt install --assume-yes --fix-broken
 
 
-##XFCE DESKTOP INSTALLATION ###################################################################################
+##XFCE DESKTOP INSTALLATION ##################################################################################
 
 ##install the Xfce desktop environment and basic desktop components
 #      echo "Installing XFCE base"
