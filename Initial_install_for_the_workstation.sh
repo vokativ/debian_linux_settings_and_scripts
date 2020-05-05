@@ -1,32 +1,33 @@
-##script
 #!/bin/bash
+##script
+
 
 #add missing repositories
-echo "Направи кафу"
-echo 'Adding repositories...'
+printf "Направи кафу"
+printf 'Adding repositories...'
 
 #update system
-    echo 'Updating current install...'
+    printf 'Updating current install...'
     sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
 
 #now install my usual packages
-    echo 'installing basic software and flathub. This will take a while'
+    printf 'installing basic software and flathub. This will take a while'
     sudo DEBIAN_FRONTEND=noninteractive apt install --yes firefox htop chromium-browser chromium-codecs-ffmpeg-extra vlc cheese neofetch curl python ruby flatpak git
 
-    read - 'Using 1) Gnome or 2) KDE? Need to know for Flatpak integration. 1 or 2: ' kde_or_gnome
+    printf "Using \n1) KDE or \n2) Gnome?\nNeed to know for Flatpak integration: "    
+    read -r kde_or_gnome
     
-    if [kde_or_gnome -eq 1]
-    then
-        sudo DEBIAN_FRONTEND=noninteractive apt install --yes plasma-discover-flatpak-backend
-    elif [kde_or_gnome -eq 2]
-        sudo DEBIAN_FRONTEND=noninteractive apt install --yes gnome-software-plugin-flatpak
-    else
-        echo "Don't be a smart ass"
+    if [ "$kde_or_gnome" == 1 ]; then
+		sudo DEBIAN_FRONTEND=noninteractive apt install --yes plasma-discover-flatpak-backend
+	    elif [ "$kde_or_gnome" == 2 ]; then
+		sudo DEBIAN_FRONTEND=noninteractive apt install --yes gnome-software-plugin-flatpak
+	    else
+	        printf "Don't be a smart ass"
     fi
     
     
 #installing vivaldi
-echo 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
+printf 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
 
     wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo apt-key add -
     sudo add-apt-repository 'deb https://repo.vivaldi.com/archive/deb/ stable main'
@@ -42,7 +43,7 @@ echo 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
     
     
 #setup my usual flatpak apps
-echo 'Installing Flatpak apps...'
+printf 'Installing Flatpak apps...'
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak --noninteractive --assumeyes install flathub com.viber.Viber
     flatpak --noninteractive --assumeyes install flathub com.skype.Client
@@ -54,22 +55,22 @@ echo 'Installing Flatpak apps...'
     flatpak --noninteractive --assumeyes install flathub com.github.tchx84.Flatseal
 
 #install the snaps for work
-echo 'Installing tandem and hub for Github...'
+printf 'Installing tandem and hub for Github...'
     sudo snap install tandem
     sudo snap install hub --classic
 
 #setup permissions for Tandem
-echo 'Setting up permissions for tandem'
+printf 'Setting up permissions for tandem'
     snap connect tandem:camera :camera
     snap connect tandem:audio-record :audio-record
     snap connect tandem:pulseaudio :pulseaudio
 
 #Remember to install InSync for Google Drive InSync
-    echo 'Download the latest Google Drive sync client at https://www.insynchq.com/downloads'
+    printf 'Download the latest Google Drive sync client at https://www.insynchq.com/downloads'
     nohup firefox https://www.insynchq.com/downloads
 
 #Install the awesome ICE from Peppermint
-echo 'If you are not on Peppermint, go to Peppermint OS PPAs and download the latest ICE'
+printf 'If you are not on Peppermint, go to Peppermint OS PPAs and download the latest ICE'
     nohup firefox https://launchpad.net/~peppermintos
 
 #setup the Github and GitLab sync with this folder
@@ -83,10 +84,10 @@ echo 'If you are not on Peppermint, go to Peppermint OS PPAs and download the la
     git clone https://github.com/vokativ/debian_linux_settings_and_scripts.git
 
     #ask if git credentials are copied
-    echo 'Setting up the git sync for backups'
-    read -p 'Have you copied the git credentials to setup the sync to Github and GitLab? y(es) or n(o): ' copied_git_credentials
+    printf 'Setting up the git sync for backups'
+    read -p -r 'Have you copied the git credentials to setup the sync to Github and GitLab? y(es) or n(o): ' copied_git_credentials
 
-    if [copied_git_credentials == 'yes'] || [copied_git_credentials == 'y']
+    if [ "$copied_git_credentials" == 'yes' ] || [ "$copied_git_credentials" == 'y' ]
     then
         #setup the sync with Github and GitLab
         export GIT_USER_NAME=vokativ
@@ -97,7 +98,7 @@ echo 'If you are not on Peppermint, go to Peppermint OS PPAs and download the la
         git remote set-url origin --add https://gitlab.com/${GIT_USER_NAME}/${GIT_REPO_NAME}.git
         #not working for now git remote set-url origin --add https://bitbucket.org/${GIT_USER_NAME}/${GIT_REPO_NAME}.git
     else
-        echo "To setup sync of this backup folder to Github and GitLab at the same time, follow instructions from https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/"
+        printf "To setup sync of this backup folder to Github and GitLab at the same time, follow instructions from https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/"
         nohup firefox https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/
     fi
     
@@ -108,7 +109,7 @@ echo 'If you are not on Peppermint, go to Peppermint OS PPAs and download the la
 
     #install yarn
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-    echo "deb https://nightly.yarnpkg.com/debian/ nightly main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    printf "deb https://nightly.yarnpkg.com/debian/ nightly main" | sudo tee /etc/apt/sources.list.d/yarn.list
     sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install yarn
 
     #remaining dependencies for electron
