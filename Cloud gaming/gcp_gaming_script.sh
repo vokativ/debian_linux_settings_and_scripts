@@ -12,13 +12,13 @@ printf "Latest snapshot is $EXISTING_SNAPSHOT\n"
 printf "\n\nDo you want to:\n1) Create a gaming VM or \n2) Save and delete a gaming VM?\nNeed to know for proper commands: "
 read -r CREATE_SAVE
   if [ "$CREATE_SAVE" == 1 ]; then #create a gaming VM
-          printf "\n\nCreating a new gaming VM\n"
+          printf "\n\n!!!!Creating a new gaming VM!!!!\n"
           printf "\n\nDo you want to start \n1) Preemptible VM (cheaper) or \n2) Stable VM (full price, but won't turn off without your command)?\nNeed to know for proper commands: "
           read -r PREEMTIBLE_OR_FULL_PRICE
 
           if [ "$PREEMTIBLE_OR_FULL_PRICE" == 1 ]; then
             ### create and start the instance based on preemtible template and the last snapshot
-            printf "Building the gaming machine based on snapshot $EXISTING_SNAPSHOT\n"
+            printf "!!!!Building the PREEMTIBLE gaming machine based on snapshot $EXISTING_SNAPSHOT!!!!\n"
             gcloud compute instances create $DISK_NAME\
              --zone=$ZONE\
              --source-instance-template $PREEMTIBLE_TEMPLATE\
@@ -27,7 +27,7 @@ read -r CREATE_SAVE
              --boot-disk-device-name $DISK_NAME
            elif [ "$PREEMTIBLE_OR_FULL_PRICE" == 2 ]; then
               ### create and start the instance based on preemtible template and the last snapshot
-              printf "Building the gaming machine based on snapshot $EXISTING_SNAPSHOT\n"
+              printf "!!!!Building the FULL PRICE gaming machine based on snapshot $EXISTING_SNAPSHOT!!!!\n"
               gcloud compute instances create $DISK_NAME\
                --zone=$ZONE\
                --source-instance-template $FULL_PRICE_TEMPLATE\
@@ -45,15 +45,15 @@ read -r CREATE_SAVE
           DATE_TIME=$(date +%Y-%M-%d-%H-%M)
 
           ###create a new snapshot of the drive
-          printf "Saving a snapshot of the disk for future use\n"
-          printf "Indicator for snapshot will be $DATE_TIME\n"
+          printf "!!!!Saving a snapshot of the disk for future use!!!!\n"
+          printf "!!!!Indicator for snapshot will be $DATE_TIME!!!!\n"
           gcloud compute disks snapshot $DISK_NAME --snapshot-names=parsec-test-$DATE_TIME --storage-location=$ZONE
 
           ###Delete the gaming instance
-          printf "Deleting the VM and the corresponding disk\n"
+          printf "!!!!Deleting the VM and the corresponding disk. This will take a couple of minutes depending on your disk utilization!!!!\n"
           gcloud compute instances delete $DISK_NAME
 
           ### Delete the old snapshot
-          printf "Deleting the old snapshot $EXISTING_SNAPSHOT to save on costs\n"
+          printf "!!!!Deleting the old snapshot $EXISTING_SNAPSHOT to save on costs!!!\n"
           gcloud compute snapshots delete $EXISTING_SNAPSHOT
     fi
