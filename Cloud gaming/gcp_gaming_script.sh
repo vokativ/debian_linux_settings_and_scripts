@@ -42,12 +42,12 @@ read -r CREATE_SAVE
           gcloud compute disks update $DISK_NAME --clear-labels --zone=$ZONE
     elif [ "$CREATE_SAVE" == 2 ]; then #save a snapshot and delete expensive resources
           #Record time and date when you finished the session for snapshot naming
-          DATE_TIME=$(date +%Y-%M-%d-%H-%M)
+          DATE_TIME=$(date +%Y-%m-%d-%H-%M)
 
           ###create a new snapshot of the drive
           printf "!!!!Saving a snapshot of the disk for future use!!!!\n"
           printf "!!!!Indicator for snapshot will be $DATE_TIME!!!!\n"
-          gcloud compute disks snapshot $DISK_NAME --snapshot-names=parsec-test-$DATE_TIME --storage-location=$ZONE
+          gcloud compute disks snapshot $DISK_NAME --snapshot-names=parsec-test-$DATE_TIME #--storage-location=$ZONE
 
           ###Delete the gaming instance
           printf "!!!!Deleting the VM and the corresponding disk. This will take a couple of minutes depending on your disk utilization!!!!\n"
