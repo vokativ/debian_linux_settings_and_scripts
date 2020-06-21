@@ -25,6 +25,8 @@ read -r CREATE_SAVE
              --source-snapshot=$EXISTING_SNAPSHOT\
              --boot-disk-size 2048\
              --boot-disk-device-name $DISK_NAME
+             #Define a zone for the disk to avoid prompts to pick a zone
+             gcloud compute disks update $DISK_NAME --clear-labels --zone=$ZONE
            elif [ "$PREEMTIBLE_OR_FULL_PRICE" == 2 ]; then
               ### create and start the instance based on preemtible template and the last snapshot
               printf "!!!!Building the FULL PRICE gaming machine based on snapshot $EXISTING_SNAPSHOT!!!!\n"
@@ -34,12 +36,14 @@ read -r CREATE_SAVE
                --source-snapshot=$EXISTING_SNAPSHOT\
                --boot-disk-size 2048\
                --boot-disk-device-name $DISK_NAME
+               #Define a zone for the disk to avoid prompts to pick a zone
+               gcloud compute disks update $DISK_NAME --clear-labels --zone=$ZONE
             else
                 printf "Don't be a smart ass\n"
           fi
 
           #Define a zone for the disk to avoid prompts to pick a zone
-          gcloud compute disks update $DISK_NAME --clear-labels --zone=$ZONE
+          #gcloud compute disks update $DISK_NAME --clear-labels --zone=$ZONE
     elif [ "$CREATE_SAVE" == 2 ]; then #save a snapshot and delete expensive resources
           #Record time and date when you finished the session for snapshot naming
           DATE_TIME=$(date +%Y-%m-%d-%H-%M)
