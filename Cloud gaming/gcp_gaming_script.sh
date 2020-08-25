@@ -51,7 +51,7 @@ read -r CREATE_SAVE
           ###create a new snapshot of the drive
           printf "****Saving a snapshot of the disk for future use****\n"
           printf "****Indicator for snapshot will be $DATE_TIME****\n"
-          gcloud compute disks snapshot $DISK_NAME --snapshot-names=parsec-test-$DATE_TIME #--storage-location=$ZONE
+          gcloud compute disks snapshot $DISK_NAME --snapshot-names=parsec-test-$DATE_TIME --zone=$ZONE --description="Nemanja installs and saves with Steam, Origin, UPlay, Blizzard and GOG"
 
           ###Delete the gaming instance
           printf "****Deleting the VM and the corresponding disk. This will take a couple of minutes depending on your disk utilization****\n"
