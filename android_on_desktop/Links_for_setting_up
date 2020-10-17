@@ -1,0 +1,18 @@
+- Software for conection
+--https://github.com/Genymobile/scrcpy
+-- Add sound forwarding
+--- https://github.com/rom1v/sndcpy
+-- GUI version
+--- https://github.com/srevinsaju/guiscrcpy
+--- snap install
+---- sudo snap install guiscrcpy
+ 
+- Start an app on the phone from the command line on desktop
+-- https://stackoverflow.com/questions/4567904/how-to-start-an-application-using-android-adb-tools
+--- adb shell monkey -p your.app.package.name 1
+--- for doing specific actions look to Intents of all apps
+ 
+ 
+- Intents of all apps
+-- https://stackoverflow.com/questions/4094109/android-how-to-get-a-list-of-all-available-intent-filters
+--- adb shell dumpsys package r
