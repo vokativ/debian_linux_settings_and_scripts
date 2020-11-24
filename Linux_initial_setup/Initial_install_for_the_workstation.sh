@@ -12,7 +12,8 @@ printf 'Adding repositories...'
 
 #now install my usual packages
     printf 'installing basic software and flathub. This will take a while'
-    sudo DEBIAN_FRONTEND=noninteractive apt install --yes firefox htop chromium-browser chromium-codecs-ffmpeg-extra vlc cheese neofetch curl python ruby flatpak git
+    sudo DEBIAN_FRONTEND=noninteractive apt install --yes firefox htop vlc neofetch curl python ruby flatpak git #cheese
+	#find chromium on flatpak or something  chromium-browser chromium-codecs-ffmpeg-extra
 
     printf "Using \n1) KDE or \n2) Gnome?\nNeed to know for Flatpak integration: "    
     read -r kde_or_gnome
@@ -47,12 +48,15 @@ printf 'Installing Flatpak apps...'
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak --noninteractive --assumeyes install flathub com.viber.Viber
     flatpak --noninteractive --assumeyes install flathub com.skype.Client
-    flatpak --noninteractive --assumeyes install flathub org.libreoffice.LibreOffice
+#    flatpak --noninteractive --assumeyes install flathub org.libreoffice.LibreOffice
     flatpak --noninteractive --assumeyes install flathub org.telegram.desktop
-    flatpak --noninteractive --assumeyes install flathub org.mozilla.Thunderbird
-    flatpak --noninteractive --assumeyes install flathub com.gitlab.librebob.Athenaeum
-    flatpak --noninteractive --assumeyes install flathub com.valvesoftware.Steam
+#    flatpak --noninteractive --assumeyes install flathub org.mozilla.Thunderbird
+#    flatpak --noninteractive --assumeyes install flathub com.gitlab.librebob.Athenaeum
+#    flatpak --noninteractive --assumeyes install flathub com.valvesoftware.Steam
     flatpak --noninteractive --assumeyes install flathub com.github.tchx84.Flatseal
+    flatpak --noninteractive --assumeyes install flathub us.zoom.Zoom
+    flatpak --noninteractive --assumeyes install flathub com.microsoft.Teams
+    flatpak --noninteractive --assumeyes install flathub org.gnome.Cheese
 
 #install the snaps for work
 printf 'Installing tandem and hub for Github...'
@@ -85,7 +89,7 @@ printf 'If you are not on Peppermint, go to Peppermint OS PPAs and download the 
 
     #ask if git credentials are copied
     printf 'Setting up the git sync for backups'
-    read -p -r 'Have you copied the git credentials to setup the sync to Github and GitLab? y(es) or n(o): ' copied_git_credentials
+    read -p -r 'Have you copied the git credentials to setup the sync to Github and GitLab? y or n: ' copied_git_credentials
 
     if [ "$copied_git_credentials" == 'yes' ] || [ "$copied_git_credentials" == 'y' ]
     then
