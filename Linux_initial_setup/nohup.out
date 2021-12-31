@@ -1,0 +1,6 @@
+
+(firefox:50080): Gtk-WARNING **: 09:23:59.129: Locale not supported by C library.
+	Using the fallback 'C' locale.
+
+(firefox:50101): Gtk-WARNING **: 09:23:59.215: Locale not supported by C library.
+	Using the fallback 'C' locale.

@@ -19,7 +19,7 @@ printf 'Adding repositories...'
     read -r kde_or_gnome
     
     if [ "$kde_or_gnome" == 1 ]; then
-		sudo DEBIAN_FRONTEND=noninteractive apt install --yes plasma-discover-flatpak-backend
+		sudo DEBIAN_FRONTEND=noninteractive apt install --yes plasma-discover-backend-flatpak
 	    elif [ "$kde_or_gnome" == 2 ]; then
 		sudo DEBIAN_FRONTEND=noninteractive apt install --yes gnome-software-plugin-flatpak
 	    else
@@ -42,14 +42,33 @@ printf 'Installing Vivaldi. If breaks, go to https://vivaldi.com/download/'
 #install Calibre
     sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
     
+#install youtube-dl (the repository versions are usually quite old
+    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+    sudo chmod a+rx /usr/local/bin/youtube-dl
     
+#install 1password
+    #1 Add the key for the 1Password apt repository:
+    curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
+    
+    #2 Add the 1Password apt repository:
+    echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
+    
+    #3 Add the debsig-verify policy:
+    sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
+    curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
+    sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
+    curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
+    
+    #4 Install 1Password:
+    sudo apt update && sudo apt install 1password
+
 #setup my usual flatpak apps
 printf 'Installing Flatpak apps...'
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     flatpak --noninteractive --assumeyes install flathub com.viber.Viber
     flatpak --noninteractive --assumeyes install flathub com.skype.Client
 #    flatpak --noninteractive --assumeyes install flathub org.libreoffice.LibreOffice
-    flatpak --noninteractive --assumeyes install flathub org.telegram.desktop
+#    flatpak --noninteractive --assumeyes install flathub org.telegram.desktop
 #    flatpak --noninteractive --assumeyes install flathub org.mozilla.Thunderbird
 #    flatpak --noninteractive --assumeyes install flathub com.gitlab.librebob.Athenaeum
 #    flatpak --noninteractive --assumeyes install flathub com.valvesoftware.Steam
@@ -57,17 +76,18 @@ printf 'Installing Flatpak apps...'
     flatpak --noninteractive --assumeyes install flathub us.zoom.Zoom
     flatpak --noninteractive --assumeyes install flathub com.microsoft.Teams
     flatpak --noninteractive --assumeyes install flathub org.gnome.Cheese
+    flatpak --noninteractive --assumeyes install flathub org.chromium.Chromium
 
 #install the snaps for work
 printf 'Installing tandem and hub for Github...'
-    sudo snap install tandem
+#    sudo snap install tandem
     sudo snap install hub --classic
 
 #setup permissions for Tandem
-printf 'Setting up permissions for tandem'
-    snap connect tandem:camera :camera
-    snap connect tandem:audio-record :audio-record
-    snap connect tandem:pulseaudio :pulseaudio
+#printf 'Setting up permissions for tandem'
+#    snap connect tandem:camera :camera
+#    snap connect tandem:audio-record :audio-record
+#    snap connect tandem:pulseaudio :pulseaudio
 
 #Remember to install InSync for Google Drive InSync
     printf 'Download the latest Google Drive sync client at https://www.insynchq.com/downloads'
@@ -85,7 +105,7 @@ printf 'If you are not on Peppermint, go to Peppermint OS PPAs and download the 
     #Create github folder in home and sync the repository
     mkdir ~/github
     cd ~/github
-    git clone https://github.com/vokativ/debian_linux_settings_and_scripts.git
+    #git clone https://github.com/vokativ/debian_linux_settings_and_scripts.git
 
     #ask if git credentials are copied
     printf 'Setting up the git sync for backups'
@@ -108,15 +128,15 @@ printf 'If you are not on Peppermint, go to Peppermint OS PPAs and download the 
     
 #Background work for GitHub Desktop in Electron
     # Using Ubuntu
-    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
+#    curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+#    sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
 
     #install yarn
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-    printf "deb https://nightly.yarnpkg.com/debian/ nightly main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install yarn
+#    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+#    printf "deb https://nightly.yarnpkg.com/debian/ nightly main" | sudo tee /etc/apt/sources.list.d/yarn.list
+#    sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt install yarn
 
     #remaining dependencies for electron
-    sudo DEBIAN_FRONTEND=noninteractive apt install libsecret-1-dev libgconf-2-4
+#    sudo DEBIAN_FRONTEND=noninteractive apt install libsecret-1-dev libgconf-2-4
     
 echo 'Готово! Finally done'
