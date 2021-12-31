@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[en_SG]=
+Comment=
+Exec=/home/nemanja/Applications/Texts-Linux-x64-v0.53.7-9305d3fa95.AppImage
+GenericName[en_SG]=Universal messenger
+GenericName=Universal messenger
+Icon=/home/nemanja/Applications/icon.png
+MimeType=
+Name[en_SG]=Texts
+Name=Texts
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Chrome Remote Desktop
+Exec=/opt/vivaldi/vivaldi --profile-directory=Default --app-id=efmjfjelnicpmdcmfikempdhlmainjcb
+Icon=vivaldi-efmjfjelnicpmdcmfikempdhlmainjcb-Default
+StartupWMClass=crx_efmjfjelnicpmdcmfikempdhlmainjcb

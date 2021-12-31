@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Telegram WebK (pure JS)
+Comment=Telegram WebK (pure JS) (Ice SSB)
+Exec=firefox --class ICE-SSB-telegramwebkpurejs --profile /home/nemanja/.local/share/ice/firefox/telegramwebkpurejs --no-remote http://webk.telegram.org
+IceFirefox=telegramwebkpurejs
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/telegramwebkpurejs.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-telegramwebkpurejs
+StartupNotify=true

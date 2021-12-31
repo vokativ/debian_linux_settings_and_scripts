@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Facebook Messenger FB
+Comment=Facebook Messenger FB (Ice SSB)
+Exec=google-chrome --app=https://www.messenger.com/ --class=ICE-SSB-facebookmessengerfb --user-data-dir=/home/nemanja/.local/share/ice/profiles/facebookmessengerfb
+X-ICE-SSB-Profile=facebookmessengerfb
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/facebookmessengerfb.ico
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-facebookmessengerfb
+StartupNotify=true

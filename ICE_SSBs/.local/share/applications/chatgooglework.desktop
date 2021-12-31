@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Chat Google Work
+Comment=Chat Google Work (Ice SSB)
+Exec=vivaldi --app=https://chat.google.com --class=ICE-SSB-chatgooglework
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/nemanja/.local/share/ice/chatgooglework.png
+Categories=GTK;Network;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=ICE-SSB-chatgooglework
+StartupNotify=true

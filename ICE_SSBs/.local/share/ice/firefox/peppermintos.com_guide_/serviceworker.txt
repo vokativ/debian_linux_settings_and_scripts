@@ -1,0 +1,11 @@
+8
+
+https://peppermintos.com/
+https://peppermintos.com/pwa-sw.js
+true
+{fceb2799-7669-4cc9-b930-299fc719c410}
+0
+1611362852659000
+1611362852661758
+1611362852344155
+#

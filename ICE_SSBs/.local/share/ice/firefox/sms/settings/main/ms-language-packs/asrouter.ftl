@@ -7,6 +7,7 @@
 cfr-doorhanger-extension-heading = Recommended Extension
 cfr-doorhanger-feature-heading = Recommended Feature
 cfr-doorhanger-pintab-heading = Try This: Pin Tab
+
 ##
 
 cfr-doorhanger-extension-sumo-link =
@@ -77,7 +78,6 @@ cfr-doorhanger-pintab-step3 = If the site has an update you’ll see a blue dot 
 cfr-doorhanger-pintab-animation-pause = Pause
 cfr-doorhanger-pintab-animation-resume = Resume
 
-
 ## Firefox Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Sync your bookmarks everywhere.
@@ -103,20 +103,7 @@ cfr-whatsnew-button =
   .label = What’s New
   .tooltiptext = What’s New
 
-cfr-whatsnew-panel-header = What’s New
-
 cfr-whatsnew-release-notes-link-text = Read the release notes
-
-cfr-whatsnew-fx70-title = { -brand-short-name } now fights harder for your privacy
-cfr-whatsnew-fx70-body =
-   The latest update enhances the Tracking Protection feature and makes it
-   easier than ever to create secure passwords for every site.
-
-cfr-whatsnew-tracking-protect-title = Protect yourself from trackers
-cfr-whatsnew-tracking-protect-body =
-   { -brand-short-name } blocks many common social and cross-site trackers that
-   follow what you do online.
-cfr-whatsnew-tracking-protect-link-text = View Your Report
 
 # This string is displayed before a large numeral that indicates the total
 # number of tracking elements blocked. Don’t add $blockedCount to your
@@ -141,10 +128,8 @@ cfr-whatsnew-lockwise-take-body =
    backed up passwords from anywhere.
 cfr-whatsnew-lockwise-take-link-text = Get the app
 
-## Search Bar
+## Search bar
 
-cfr-whatsnew-searchbar-title = Type less, find more with the address bar
-cfr-whatsnew-searchbar-body-topsites = Now, just select the address bar, and a box will expand with links to your top sites.
 cfr-whatsnew-searchbar-icon-alt-text = Magnifying glass icon
 
 ## Picture-in-Picture
@@ -152,12 +137,6 @@ cfr-whatsnew-searchbar-icon-alt-text = Magnifying glass icon
 cfr-whatsnew-pip-header = Watch videos while you browse
 cfr-whatsnew-pip-body = Picture-in-picture pops video into a floating window so you can watch while working in other tabs.
 cfr-whatsnew-pip-cta = Learn more
-
-## Permission Prompt
-
-cfr-whatsnew-permission-prompt-header = Fewer annoying site pop-ups
-cfr-whatsnew-permission-prompt-body = { -brand-shorter-name } now blocks sites from automatically asking to send you pop-up messages.
-cfr-whatsnew-permission-prompt-cta = Learn more
 
 ## Fingerprinter Counter
 
@@ -189,21 +168,6 @@ cfr-doorhanger-sync-logins-body = Securely store and sync your passwords to all 
 cfr-doorhanger-sync-logins-ok-button = Turn on { -sync-brand-short-name }
   .accesskey = T
 
-## Send Tab
-
-cfr-doorhanger-send-tab-header = Read this on the go
-cfr-doorhanger-send-tab-recipe-header = Take this recipe to the kitchen
-cfr-doorhanger-send-tab-body = Send Tab lets you easily share this link to your phone or anywhere you’re signed in to { -brand-product-name }.
-cfr-doorhanger-send-tab-ok-button = Try Send Tab
-  .accesskey = T
-
-## Firefox Send
-
-cfr-doorhanger-firefox-send-header = Share this PDF securely
-cfr-doorhanger-firefox-send-body = Keep your sensitive documents safe from prying eyes with end-to-end encryption and a link that disappears when you’re done.
-cfr-doorhanger-firefox-send-ok-button = Try { -send-brand-name }
-  .accesskey = T
-
 ## Social Tracking Protection
 
 cfr-doorhanger-socialtracking-ok-button = See Protections
@@ -223,10 +187,70 @@ cfr-doorhanger-cryptominers-description = Your privacy matters. { -brand-short-n
 
 # Variables:
 #   $blockedCount (Number) - The total count of blocked trackers. This number will always be greater than 1.
-#   $date (String) - The date we began recording the count of blocked trackers
-cfr-doorhanger-milestone-heading =
+#   $date (Datetime) - The date we began recording the count of blocked trackers
+cfr-doorhanger-milestone-heading2 =
   { $blockedCount ->
-   *[other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { $date }!
+    *[other] { -brand-short-name } blocked over <b>{ $blockedCount }</b> trackers since { DATETIME($date, month: "long", year: "numeric") }!
   }
 cfr-doorhanger-milestone-ok-button = See All
   .accesskey = S
+cfr-doorhanger-milestone-close-button = Close
+  .accesskey = C
+
+## What’s New Panel Content for Firefox 76
+## Protections Dashboard message
+
+cfr-whatsnew-protections-header = Protections at a glance
+cfr-whatsnew-protections-body = The Protections Dashboard includes summary reports about data breaches and password management. You can now track how many breaches you’ve resolved, and see if any of your saved passwords may have been exposed in a data breach.
+cfr-whatsnew-protections-cta-link = View Protections Dashboard
+cfr-whatsnew-protections-icon-alt = Shield icon
+
+## DOH Message
+
+cfr-doorhanger-doh-body = Your privacy matters. { -brand-short-name } now securely routes your DNS requests whenever possible to a partner service to protect you while you browse.
+cfr-doorhanger-doh-header = More secure, encrypted DNS lookups
+cfr-doorhanger-doh-primary-button = OK, Got it
+  .accesskey = O
+cfr-doorhanger-doh-secondary-button = Disable
+  .accesskey = D
+
+## Fission Experiment Message
+
+cfr-doorhanger-fission-body-approved = Your privacy matters. { -brand-short-name } now isolates, or sandboxes, websites from each other, which makes it harder for hackers to steal passwords, credit card numbers, and other sensitive information.
+cfr-doorhanger-fission-header = Site Isolation
+cfr-doorhanger-fission-primary-button = OK, Got it
+  .accesskey = O
+cfr-doorhanger-fission-secondary-button = Learn more
+  .accesskey = L
+
+## What's new: Cookies message
+
+cfr-whatsnew-clear-cookies-header = Automatic protection from sneaky tracking tactics
+cfr-whatsnew-clear-cookies-body = Some trackers redirect you to other websites that secretly set cookies. { -brand-short-name } now automatically clears those cookies so you can’t be followed.
+cfr-whatsnew-clear-cookies-image-alt = Cookie blocked illustration
+
+## What's new: Media controls message
+
+cfr-whatsnew-media-keys-header = More media controls
+cfr-whatsnew-media-keys-body = Play and pause audio or video right from your keyboard or headset, making it easy to control media from another tab, program, or even when your computer is locked. You can also move between tracks using the forward and back keys.
+cfr-whatsnew-media-keys-button = Learn how
+
+## What's new: Search shortcuts
+
+cfr-whatsnew-search-shortcuts-header = Search shortcuts in the address bar
+cfr-whatsnew-search-shortcuts-body = Now, when you type a search engine or specific site into the address bar, a blue shortcut will appear in the search suggestions beneath. Select that shortcut to complete your search directly from the address bar.
+
+## What's new: Cookies protection
+
+cfr-whatsnew-supercookies-header = Protection from malicious supercookies
+cfr-whatsnew-supercookies-body = Websites can secretly attach a “supercookie” to your browser that can follow you around the web, even after you clear your cookies. { -brand-short-name } now provides strong protection against supercookies so they can’t be used to track your online activities from one site to the next.
+
+## What's new: Better bookmarking
+
+cfr-whatsnew-bookmarking-header = Better bookmarking
+cfr-whatsnew-bookmarking-body = It’s easier to keep track of your favorite sites. { -brand-short-name } now remembers your preferred location for saved bookmarks, shows the bookmarks toolbar by default on new tabs, and gives you easy access to the rest of your bookmarks via a toolbar folder.
+
+## What's new: Cross-site cookie tracking
+
+cfr-whatsnew-cross-site-tracking-header = Comprehensive protection from cross-site cookie tracking
+cfr-whatsnew-cross-site-tracking-body = You can now opt in to better protection from cookie tracking. { -brand-short-name} can isolate your activities and data to the site you’re currently on so information stored in the browser isn’t shared between websites.

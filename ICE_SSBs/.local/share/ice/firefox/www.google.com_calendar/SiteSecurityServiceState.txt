@@ -1,0 +1,6 @@
+classify-client.services.mozilla.com:HSTS	0	18851	1660285835209,1,0,2
+firefox.settings.services.mozilla.com:HSTS	0	18851	1660285835309,1,0,2
+www.mozilla.org^partitionKey=%28http%2Cmozilla.org%29:HSTS	0	18851	1644474634393,1,1,2
+location.services.mozilla.com:HSTS	0	18851	1660285834855,1,1,2
+calendar.google.com^partitionKey=%28http%2Cgoogle.com%29:HSTS	0	18851	1660285834987,1,1,2
+normandy.cdn.mozilla.net:HSTS	0	18851	1660285834977,1,0,2
