@@ -124,6 +124,7 @@ printf 'If you are not on Peppermint, go to Peppermint OS PPAs and download the 
     else
         printf "To setup sync of this backup folder to Github and GitLab at the same time, follow instructions from https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/"
         nohup firefox https://moox.io/blog/keep-in-sync-git-repos-on-github-gitlab-bitbucket/
+        nohup firefox https://archive.ph/uT67O
     fi
     
 #Background work for GitHub Desktop in Electron
