@@ -20,6 +20,7 @@ printf 'Adding repositories...'
     
     if [ "$kde_or_gnome" == 1 ]; then
 		sudo DEBIAN_FRONTEND=noninteractive apt install --yes plasma-discover-backend-flatpak
+		sudo sudo add-apt-repository ppa:kubuntu-ppa/backports
 	    elif [ "$kde_or_gnome" == 2 ]; then
 		sudo DEBIAN_FRONTEND=noninteractive apt install --yes gnome-software-plugin-flatpak
 	    else
